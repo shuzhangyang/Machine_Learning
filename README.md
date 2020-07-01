@@ -22,3 +22,5 @@ The scanning was performed using quantum as random_method, a split_ratio of 0.3 
 The val_loss was used to select the best model.
 
 The optimized deep learning model gave improved r2 score on test data than sklearn regressors including RandomForestRegressor. 
+
+3. "Data_ParFE_32.csv" contains the data for training, evaluation, and testing.
