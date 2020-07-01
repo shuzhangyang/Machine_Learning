@@ -110,15 +110,11 @@ p = {'num_layers': list(range(1,5)),
      # 'last_activation': ['sigmoid', 'linear']
      }
 
-
-# os.chdir("C:/Users/shuzh/Documents/Scripts/Crispr/ML/") #==================
-
 # rng = np.random.RandomState(1)
 np.random.seed(543)
 
 # import dataset
 files = glob.glob("Data_ParFE*.csv")
-#f = [i for i in files if "32" in i][0]  # select file by pattern
 
 # number of targets to predict
 nt = 12
@@ -185,9 +181,6 @@ for f in files:
     plots(y_test, y_pred, par, 'plot_KerasTalos_Test_%s_%s.pdf' % (experiment_name, fname))  #===============
     plt.close()
     
-    # t.details
-    # t.saved_models
-    
     # reporting ------------------------------
     analyze_object = talos.Analyze(t)
     # four dimensional bar grid
@@ -210,19 +203,7 @@ for f in files:
     plt.savefig("plot_KerasTalos_lr_%s_%s.pdf" % (experiment_name, fname))
     plt.close()
     
-    # # get the best paramaters (top 5)
-    # analyze_object.best_params('mae', exclude=[], n=5, ascending=True)
-    # # get the highest result for any metric
-    # analyze_object.low('mae')
-    # # line plot a metric
-    # analyze_object.plot_line('mae')
-    # # up to two dimensional kernel density estimator
-    # analyze_object.plot_kde('mae', 'loss')
-    # # a simple histogram
-    # analyze_object.plot_hist('mae', bins=50)
-    # # heatmap correlation
-    # analyze_object.plot_corr('val_loss', ['mae', 'loss', 'val_mae'])
-    
+   
     # # evaluate by cross validation ---------------------------
     # evaluate_object = talos.Evaluate(t)
     # evaluate_object.evaluate(X_train, y_train, folds=10, metric='mae', task='continuous', asc=True)
@@ -232,23 +213,4 @@ for f in files:
     # crispr = talos.Restore('KerasTalos_deploy_%s.zip' % fname)
     # # make predictions with the restored model
     # y_pred = crispr.model.predict(X_test)
-    
-    # # summarize history for loss --------------------
-    # plt.plot(history.history['loss'])
-    # plt.plot(history.history['val_loss'])
-    # plt.title('model loss')
-    # plt.ylabel('loss')
-    # plt.xlabel('epoch')
-    # plt.legend(['train', 'test'], loc='upper left')
-    # plt.show()
-    
-    # # single variate plot-------------------
-    # import seaborn as sn
-    # csvfiles = glob.glob(experiment_name + '/*.csv')
-    # df = pd.read_csv(csvfiles[-1])  #last csv file
-    # metric = ['num_layers', 'units', 'optimizer', 'activation', 'batch_size', 'dropout', 'epochs']
-    # for metric in metric:
-    #     ax = sn.boxplot(x=metric, y="mae", data=df.reset_index(),color='salmon')
-    #     ax.set_title(f'Loss as function of {metric}')
-    #     ax.get_figure().savefig('plot_Loss-%s_%s.pdf' % (metric, fname))
     
