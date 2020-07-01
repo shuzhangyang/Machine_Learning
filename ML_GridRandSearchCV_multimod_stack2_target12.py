@@ -166,13 +166,8 @@ def multiplot(name, estimator, X_test, y_test, targets):
     fig.subplots_adjust(left=0.06, right=0.99, top=0.99, bottom=0.08)
     fig.savefig('plot_'+name+'.pdf')  #======================
  
-# os.chdir("C:/Users/shuzh/Documents/Scripts/Crispr/ML/")
-
-# rng = np.random.RandomState(1)
-
 # import dataset
 files = glob.glob("Data_ParFE*.csv")
-#f = [i for i in files if "32" in i][0]  # select file by pattern
 
 # number of targets to predict (perG,perK,phsG,phsK,ampG,ampK,bslG,bslK,trdG,trdK,rG,rK) 
 nt = 12    #===================================
