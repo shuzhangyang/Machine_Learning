@@ -12,7 +12,7 @@ The scanning was performed using quantum as random_method, a split_ratio of 0.3 
 and mean absolute error as the metric. The fraction_limit was set as 0.1~0.5 that resulted in 1834~3000 evaluations. 
 
 Autonomio Talos [Computer software]. (2019). Retrieved from http://github.com/autonomio/talos.
-@author: shuzh
+@author: Shuzhang Yang
 """
 
 import os, glob
