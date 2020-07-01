@@ -4,7 +4,7 @@ Created on Sun May 24 11:09:25 2020
 Machine learning in python 3.6.9 using scikit-learn regressors that support multi-target regression. 
 The EstimtorSelectionHelper was extended from: 
     http://www.codiply.com/blog/hyperparameter-grid-search-across-multiple-models-in-scikit-learn/
-@author: shuzh
+@author: Shuzhang Yang
 """
 
 import numpy as np
