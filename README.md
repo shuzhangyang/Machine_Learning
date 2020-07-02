@@ -7,9 +7,9 @@ Several regressors supporting multi-target regression are selected to explore th
 
 Due to high computation demand of RandomForestRegressor, we set an iteration number of 20 for RandomForestRegressor and 100 for the rest regressors.
 
-In addition to individual regressors above, two more approaches were employed and their performance were compared with those individual models. First, an ensemble of the four best performing regressors was constructed using StackingRegressor from mlxtend package which support multitarget regression; second, the results from the four best performing regressors were averaged together.
+In addition to individual regressors above, two more approaches were employed and their performance were compared with those individual models. First, an ensemble of the four best performing regressors was constructed using StackingRegressor from "mlxtend" package which support multitarget regression, with RidgeCV as the meta_regressor; second, the results from the four best performing regressors were averaged together.
 
-In terms of testing r2 scores, RandomForestRegressor outperforms other models, including the stacked and averaged models.
+In terms of r2 scores for test data, RandomForestRegressor outperforms other models, including the stacked and averaged models.
 
 2. Deep learning.
 
